@@ -1,0 +1,737 @@
+1) 
+$ date
+Sat, Oct 12, 2019 11:44:53 AM
+
+2)
+$ ping
+
+Usage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
+            [-r count] [-s count] [[-j host-list] | [-k host-list]]
+            [-w timeout] [-R] [-S srcaddr] [-4] [-6] target_name
+
+Options:
+    -t             Ping the specified host until stopped.
+                   To see statistics and continue - type Control-Break;
+                   To stop - type Control-C.
+    -a             Resolve addresses to hostnames.
+    -n count       Number of echo requests to send.
+    -l size        Send buffer size.
+    -f             Set Don't Fragment flag in packet (IPv4-only).
+    -i TTL         Time To Live.
+    -v TOS         Type Of Service (IPv4-only. This setting has been deprecated
+                   and has no effect on the type of service field in the IP Header).
+    -r count       Record route for count hops (IPv4-only).
+    -s count       Timestamp for count hops (IPv4-only).
+    -j host-list   Loose source route along host-list (IPv4-only).
+    -k host-list   Strict source route along host-list (IPv4-only).
+    -w timeout     Timeout in milliseconds to wait for each reply.
+    -R             Use routing header to test reverse route also (IPv6-only).
+    -S srcaddr     Source address to use.
+    -4             Force using IPv4.
+    -6             Force using IPv6.
+
+3)
+$ ping -t google.com
+
+Pinging google.com [216.239.38.120] with 32 bytes of data:
+Reply from 216.239.38.120: bytes=32 time=90ms TTL=53
+Reply from 216.239.38.120: bytes=32 time=188ms TTL=53
+
+4)
+$ ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Local Area Connection 5:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wireless Network Connection 6:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wireless Network Connection 5:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::8157:3f87:4940:49c8%23
+   IPv4 Address. . . . . . . . . . . : 192.168.100.56
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::1%23
+                                       192.168.100.1
+
+Ethernet adapter VirtualBox Host-Only Network:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::2513:3eb0:b7d6:c7c9%20
+   Autoconfiguration IPv4 Address. . : 169.254.199.201
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter VirtualBox Host-Only Network #2:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::84c1:f2d:6fad:530d%21
+   IPv4 Address. . . . . . . . . . . : 192.168.130.2
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Tunnel adapter isatap.{DD8CAC8A-D128-4610-9F4D-E650DA262217}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Tunnel adapter Teredo Tunneling Pseudo-Interface:
+
+   Connection-specific DNS Suffix  . :
+   IPv6 Address. . . . . . . . . . . : 2001:0:2456:3fb6:38d5:26d3:3f57:9bc7
+   Link-local IPv6 Address . . . . . : fe80::38d5:26d3:3f57:9bc7%12
+   Default Gateway . . . . . . . . . : ::
+
+Tunnel adapter isatap.{76401E90-7F3D-43C0-98E0-AE60151E02DC}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Tunnel adapter isatap.{8111A6F1-8954-45D6-B3CD-32222016AAB2}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Tunnel adapter isatap.{5A66302B-8E94-4AED-9DB4-FDE354135BE4}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Tunnel adapter isatap.{13D4485F-19AF-4121-A3E7-471C8984E7F0}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+5)
+$ timeout --help
+Usage: timeout [OPTION] DURATION COMMAND [ARG]...
+  or:  timeout [OPTION]
+Start COMMAND, and kill it if still running after DURATION.
+
+Mandatory arguments to long options are mandatory for short options too.
+      --preserve-status
+                 exit with the same status as COMMAND, even when the
+                   command times out
+      --foreground
+                 when not running timeout directly from a shell prompt,
+                   allow COMMAND to read from the TTY and get TTY signals;
+                   in this mode, children of COMMAND will not be timed out
+  -k, --kill-after=DURATION
+                 also send a KILL signal if COMMAND is still running
+                   this long after the initial signal was sent
+  -s, --signal=SIGNAL
+                 specify the signal to be sent on timeout;
+                   SIGNAL may be a name like 'HUP' or a number;
+                   see 'kill -l' for a list of signals
+      --help     display this help and exit
+      --version  output version information and exit
+
+DURATION is a floating point number with an optional suffix:
+'s' for seconds (the default), 'm' for minutes, 'h' for hours or 'd' for days.
+
+If the command times out, and --preserve-status is not set, then exit with
+status 124.  Otherwise, exit with the status of COMMAND.  If no signal
+is specified, send the TERM signal upon timeout.  The TERM signal kills
+any process that does not block or catch that signal.  It may be necessary
+to use the KILL (9) signal, since this signal cannot be caught, in which
+case the exit status is 128+9 rather than 124.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/timeout>
+or available locally via: info '(coreutils) timeout invocation'
+
+6)
+$ verifier
+bash: /c/Windows/system32/verifier: Permission denied
+
+7)
+$ vssadmin
+vssadmin 1.1 - Volume Shadow Copy Service administrative command-line tool
+(C) Copyright 2001-2005 Microsoft Corp.
+
+Error: Invalid command.
+
+---- Commands Supported ----
+
+Delete Shadows        - Delete volume shadow copies
+List Providers        - List registered volume shadow copy providers
+List Shadows          - List existing volume shadow copies
+List ShadowStorage    - List volume shadow copy storage associations
+List Volumes          - List volumes eligible for shadow copies
+List Writers          - List subscribed volume shadow copy writers
+Resize ShadowStorage  - Resize a volume shadow copy storage association
+
+8)
+$ getmac
+
+Physical Address    Transport Name
+=================== ==========================================================
+0A-00-27-00-00-14   \Device\Tcpip_{5A66302B-8E94-4AED-9DB4-FDE354135BE4}
+0A-00-27-00-00-15   \Device\Tcpip_{8111A6F1-8954-45D6-B3CD-32222016AAB2}
+18-A6-F7-15-39-3A   \Device\Tcpip_{13D4485F-19AF-4121-A3E7-471C8984E7F0}
+18-A6-F7-15-39-3A   Media disconnected
+04-7D-7B-46-C2-A9   Media disconnected
+
+$ gpresult
+
+GPRESULT [/S system [/U username [/P [password]]]] [/SCOPE scope]
+           [/USER targetusername] [/R | /V | /Z]
+
+Description:
+    This command line tool displays the Resultant Set of Policy (RSoP)
+    information for a target user and computer.
+
+Parameter List:
+    /S        system           Specifies the remote system to connect to.
+
+    /U        [domain\]user    Specifies the user context under which the
+                               command should execute.
+    /P        [password]       Specifies the password for the given user
+                               context. Prompts for input if omitted.
+    /SCOPE    scope            Specifies whether the user or the
+                               computer settings needs to be displayed.
+                               Valid values: "USER", "COMPUTER".
+
+    /USER     [domain\]user    Specifies the user name for which the
+                               RSOP data is to be displayed.
+
+    /R                         Displays RSoP summary data.
+
+    /V                         Specifies that verbose information should
+                               be displayed. Verbose information provides
+                               additional detailed settings that have
+                               been applied with a precedence of 1.
+
+    /Z                         Specifies that the super-verbose
+                               information should be displayed. Super-
+                               verbose information provides additional
+                               detailed settings that have been applied
+                               with a precedence of 1 and higher. This
+                               allows you to see if a setting was set in
+                               multiple places. See the Group Policy
+                               online help topic for more information.
+
+    /?                         Displays this help message.
+
+
+Examples:
+    GPRESULT /R
+    GPRESULT /USER targetusername /V
+    GPRESULT /S system /USER targetusername /SCOPE COMPUTER /Z
+    GPRESULT /S system /U username /P password /SCOPE USER /V
+
+10)
+$ echo test123
+test123
+
+11)
+$ find
+.
+./.git
+./.git/COMMIT_EDITMSG
+./.git/config
+./.git/description
+./.git/HEAD
+./.git/hooks
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/commit-msg.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-commit.sample
+./.git/hooks/pre-push.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/pre-receive.sample
+./.git/hooks/prepare-commit-msg.sample
+./.git/hooks/update.sample
+./.git/index
+./.git/info
+./.git/info/exclude
+./.git/logs
+./.git/logs/HEAD
+./.git/logs/refs
+./.git/logs/refs/heads
+./.git/logs/refs/heads/master
+./.git/logs/refs/remotes
+./.git/logs/refs/remotes/origin
+./.git/logs/refs/remotes/origin/master
+./.git/objects
+./.git/objects/08
+./.git/objects/08/2873d734755ff52098053e8ed11dcd8ae7447a
+./.git/objects/15
+./.git/objects/15/acaa2a26b4000b31b722c758051a07033a21e3
+./.git/objects/16
+./.git/objects/16/ca111cf488db9e011cc1f69df4a82ac7abb2bd
+./.git/objects/3a
+./.git/objects/3a/1c67de090025a6a1fbd6ee60a6753d31dc200e
+./.git/objects/4b
+./.git/objects/4b/825dc642cb6eb9a060e54bf8d69288fbee4904
+./.git/objects/89
+./.git/objects/89/9a9d510ef5dec0d404dc11d54c3960b7a636e6
+./.git/objects/cf
+./.git/objects/cf/fd55e120cc4d633ab7046b61afaaae8bbc6248
+./.git/objects/e6
+./.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+./.git/objects/f5
+./.git/objects/f5/201add354b2285d3eaaaac53dfa90e9e3c85d8
+./.git/objects/info
+./.git/objects/pack
+./.git/refs
+./.git/refs/heads
+./.git/refs/heads/master
+./.git/refs/remotes
+./.git/refs/remotes/origin
+./.git/refs/remotes/origin/master
+./.git/refs/tags
+./bismillah.txt
+./kemampuan-dasar-1
+./kemampuan-dasar-1/latihan
+./kemampuan-dasar-1/latihan/powershellscripts
+./kemampuan-dasar-1/latihan/powershellscripts/cmdline.txt
+
+12)
+$ hostname
+ALKAFF-PC
+
+13)
+$ label
+Volume in drive C: has no label
+Volume Serial Number is 94FE-F271
+Volume label (32 characters, ENTER for none)?
+
+14)
+$ lodctr
+
+
+LODCTR
+    Updates registry values related to performance counters.
+
+Usage:
+    LODCTR <INI-FileName>
+        INI-FileName is the name of the initialization file that contains
+            the counter name definitions and explain text for an extensible
+            counter DLL.
+
+    LODCTR /S:<Backup-FileName>
+        save the current perf registry strings and info to <Backup-FileName>
+
+    LODCTR /R:<Backup-FileName>
+        restore the perf registry strings and info using <Backup-FileName>
+
+    LODCTR /R
+        rebuild the perf registry strings and info from scratch based on the current
+            registry settings and backup INI files.
+
+    LODCTR /T:<Service-Name>
+        set the performance counter service as trusted.
+
+    LODCTR /E:<Service-Name>
+        enable the performance counter service.
+
+    LODCTR /D:<Service-Name>
+        disable the performance counter service.
+
+    LODCTR /Q
+
+    LODCTR /Q:<Service-Name>
+        query the performance counter service information, either query all or specified one.
+
+    LODCTR /M:<Counter-Manifest>
+        install Windows Vista performance counter provider definition XML file
+            to system repository.
+
+Note: any arguments with spaces in the names must be enclosed within
+Double Quotation marks.
+
+15)
+Data Collector Set                      Type                          Status
+-------------------------------------------------------------------------------
+
+The command completed successfully.
+
+16)
+$ mkdir test123
+
+17)
+$ powershell
+Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+pathPS C:\xampp\htdocs\praxis-academy>
+path
+
+
+
+$parpath : The term 'path' is not recognized as the name of a cmdlet, function,
+script file, or operable program. Check the spelling of the name, or if a path
+was included, verify that the path is correct and try again.
+At line:1 char:1
++ path
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (path:String) [], CommandNotFoun
+   dException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+tPS C:\xampp\htdocs\praxis-academy>
+ : The term '' is not recognized as the name of a cmdlet,
+function, script file, or operable program. Check the spelling of the name, or
+if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (:String) [], CommandNotFo
+   undException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\xampp\htdocs\praxis-academy>
+PS C:\xampp\htdocs\praxis-academy>
+PS C:\xampp\htdocs\praxis-academy>
+
+
+18)
+$ print
+No file to print
+
+19)
+$ start
+(membuka jendela cmd)
+
+20)
+$ takeown /?
+
+TAKEOWN [/S system [/U username [/P [password]]]]
+        /F filename [/A] [/R [/D prompt]]
+
+Description:
+    This tool allows an administrator to recover access to a file that
+    was denied by re-assigning file ownership.
+
+Parameter List:
+    /S           system          Specifies the remote system to
+                                 connect to.
+
+    /U           [domain\]user   Specifies the user context under
+                                 which the command should execute.
+
+    /P           [password]      Specifies the password for the
+                                 given user context.
+                                 Prompts for input if omitted.
+
+    /F           filename        Specifies the filename or directory
+                                 name pattern. Wildcard "*" can be used
+                                 to specify the pattern. Allows
+                                 sharename\filename.
+
+    /A                           Gives ownership to the administrators
+                                 group instead of the current user.
+
+    /R                           Recurse: instructs tool to operate on
+                                 files in specified directory and all
+                                 subdirectories.
+
+    /D           prompt          Default answer used when the current user
+                                 does not have the "list folder" permission
+                                 on a directory.  This occurs while operating
+                                 recursively (/R) on sub-directories. Valid
+                                 values "Y" to take ownership or "N" to skip.
+
+    /?                           Displays this help message.
+
+    NOTE: 1) If /A is not specified, file ownership will be given to the
+             current logged on user.
+
+          2) Mixed patterns using "?" and "*" are not supported.
+
+          3) /D is used to suppress the confirmation prompt.
+
+Examples:
+    TAKEOWN /?
+    TAKEOWN /F lostfile
+    TAKEOWN /F \\system\share\lostfile /A
+    TAKEOWN /F directory /R /D N
+    TAKEOWN /F directory /R /A
+    TAKEOWN /F *
+    TAKEOWN /F C:\Windows\System32\acme.exe
+    TAKEOWN /F %windir%\*.txt
+    TAKEOWN /S system /F MyShare\Acme*.doc
+    TAKEOWN /S system /U user /F MyShare\foo.dll
+    TAKEOWN /S system /U domain\user /P password /F share\filename
+    TAKEOWN /S system /U user /P password /F Doc\Report.doc /A
+    TAKEOWN /S system /U user /P password /F Myshare\*
+    TAKEOWN /S system /U user /P password /F Home\Logon /R
+    TAKEOWN /S system /U user /P password /F Myshare\directory /R /A
+
+21)
+$ time
+
+real    0m0.003s
+user    0m0.000s
+sys     0m0.000s
+
+
+22)
+$ timeout --help
+Usage: timeout [OPTION] DURATION COMMAND [ARG]...
+  or:  timeout [OPTION]
+Start COMMAND, and kill it if still running after DURATION.
+
+Mandatory arguments to long options are mandatory for short options too.
+      --preserve-status
+                 exit with the same status as COMMAND, even when the
+                   command times out
+      --foreground
+                 when not running timeout directly from a shell prompt,
+                   allow COMMAND to read from the TTY and get TTY signals;
+                   in this mode, children of COMMAND will not be timed out
+  -k, --kill-after=DURATION
+                 also send a KILL signal if COMMAND is still running
+                   this long after the initial signal was sent
+  -s, --signal=SIGNAL
+                 specify the signal to be sent on timeout;
+                   SIGNAL may be a name like 'HUP' or a number;
+                   see 'kill -l' for a list of signals
+      --help     display this help and exit
+      --version  output version information and exit
+
+DURATION is a floating point number with an optional suffix:
+'s' for seconds (the default), 'm' for minutes, 'h' for hours or 'd' for days.
+
+If the command times out, and --preserve-status is not set, then exit with
+status 124.  Otherwise, exit with the status of COMMAND.  If no signal
+is specified, send the TERM signal upon timeout.  The TERM signal kills
+any process that does not block or catch that signal.  It may be necessary
+to use the KILL (9) signal, since this signal cannot be caught, in which
+case the exit status is 128+9 rather than 124.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/timeout>
+or available locally via: info '(coreutils) timeout invocation'
+
+23)
+$ tasklist
+
+Image Name                     PID Session Name        Session#    Mem Usage
+========================= ======== ================ =========== ============
+System Idle Process              0 Services                   0         24 K
+System                           4 Services                   0        888 K
+smss.exe                       324 Services                   0        344 K
+csrss.exe                      424 Services                   0      2,168 K
+wininit.exe                    500 Services                   0      1,004 K
+csrss.exe                      532 Console                    1      5,576 K
+services.exe                   564 Services                   0      5,572 K
+lsass.exe                      576 Services                   0      7,240 K
+lsm.exe                        584 Services                   0      2,128 K
+svchost.exe                    696 Services                   0      4,712 K
+svchost.exe                    796 Services                   0      5,184 K
+atiesrxx.exe                   860 Services                   0      1,188 K
+winlogon.exe                   892 Console                    1      2,104 K
+svchost.exe                    944 Services                   0     11,848 K
+svchost.exe                    976 Services                   0    138,576 K
+svchost.exe                   1020 Services                   0     21,196 K
+svchost.exe                    352 Services                   0     10,504 K
+atieclxx.exe                  1120 Console                    1      2,000 K
+svchost.exe                   1192 Services                   0     11,608 K
+AvastSvc.exe                  1376 Services                   0    171,360 K
+dwm.exe                       1484 Console                    1     20,212 K
+explorer.exe                  1540 Console                    1     39,796 K
+spoolsv.exe                   1748 Services                   0      4,360 K
+svchost.exe                   1784 Services                   0      9,044 K
+taskhost.exe                  1812 Console                    1      5,400 K
+taskeng.exe                   2040 Console                    1      2,500 K
+AdobeUpdateService.exe        1228 Services                   0      1,404 K
+SM¦RTP.exe                    1560 Console                    1      4,696 K
+SynTPEnh.exe                  1692 Console                    1      5,892 K
+Spotify.exe                   1424 Console                    1     76,056 K
+IDMan.exe                     1500 Console                    1      3,100 K
+AMDQuickStream.exe            1504 Console                    1      2,176 K
+MiPhoneHelper.exe              336 Console                    1      1,392 K
+E_YATIUPE.EXE                  512 Console                    1      2,476 K
+E_YATII2E.EXE                 1480 Console                    1      4,916 K
+AvastUI.exe                   1580 Console                    1     24,100 K
+RaUI.exe                      1512 Console                    1      4,920 K
+GoogleCrashHandler.exe        2364 Services                   0        696 K
+wlanext.exe                   2432 Services                   0      2,036 K
+conhost.exe                   2440 Services                   0        744 K
+GoogleCrashHandler64.exe      2584 Services                   0        292 K
+EvernoteClipper.exe           2644 Console                    1      1,468 K
+MiWiFiMonitor.exe             2772 Console                    1      1,192 K
+MOM.exe                       2808 Console                    1      6,728 K
+CCC.exe                       2952 Console                    1     15,264 K
+Spotify.exe                   2064 Console                    1      5,176 K
+SmadavProtect64.exe           2784 Console                    1        336 K
+AGSService.exe                3020 Services                   0      1,656 K
+Fuel.Service.exe              3096 Services                   0      3,000 K
+RaRegistry.exe                3328 Services                   0        972 K
+RaRegistry64.exe              3352 Services                   0        792 K
+MemuService.exe               3380 Services                   0      1,508 K
+RaRegistry.exe                3400 Services                   0      1,028 K
+RaRegistry64.exe              3480 Services                   0        784 K
+PublicWiFiService.exe         3504 Services                   0      2,240 K
+PsiService_2.exe              3588 Services                   0        744 K
+RtlService.exe                3616 Services                   0      1,392 K
+RtlService.exe                3684 Services                   0      1,392 K
+RtWLan.exe                    3692 Console                    1      5,596 K
+RTLDHCP.exe                   3720 Services                   0      1,512 K
+svchost.exe                   3756 Services                   0      1,912 K
+TeamViewer_Service.exe        3828 Services                   0      4,756 K
+MiRouter.exe                  3864 Services                   0        984 K
+svchost.exe                   3320 Services                   0     10,464 K
+SearchIndexer.exe             1700 Services                   0      9,700 K
+SynTPHelper.exe               4104 Console                    1      1,004 K
+WUDFHost.exe                  4116 Services                   0      1,096 K
+svchost.exe                   4340 Services                   0      2,392 K
+Spotify.exe                   4916 Console                    1      7,888 K
+chrome.exe                    4796 Console                    1    151,308 K
+chrome.exe                    2892 Console                    1      2,080 K
+Spotify.exe                   2156 Console                    1     15,208 K
+chrome.exe                    1008 Console                    1      1,488 K
+Spotify.exe                   4696 Console                    1     71,216 K
+chrome.exe                    3112 Console                    1     81,264 K
+chrome.exe                    4388 Console                    1     29,912 K
+chrome.exe                    5260 Console                    1     12,984 K
+chrome.exe                    5300 Console                    1      9,504 K
+chrome.exe                    5312 Console                    1     24,324 K
+chrome.exe                    5344 Console                    1      9,372 K
+chrome.exe                    5352 Console                    1     40,936 K
+chrome.exe                    5360 Console                    1     17,528 K
+chrome.exe                    5368 Console                    1     21,852 K
+IEMonitor.exe                 2944 Console                    1      1,568 K
+aswidsagent.exe               6216 Services                   0     26,568 K
+RichVideo64.exe                788 Services                   0      1,732 K
+chrome.exe                    6028 Console                    1     17,816 K
+chrome.exe                    6684 Console                    1    270,876 K
+chrome.exe                    6820 Console                    1      5,372 K
+SM¦RTP.exe                    3252 Console                    1      1,308 K
+AvastUI.exe                   6928 Console                    1      6,256 K
+chrome.exe                    2980 Console                    1     60,692 K
+unsecapp.exe                  7756 Services                   0      2,156 K
+chrome.exe                    6420 Console                    1     37,884 K
+chrome.exe                    7444 Console                    1     80,280 K
+chrome.exe                    2084 Console                    1     51,812 K
+chrome.exe                    7304 Console                    1     54,076 K
+chrome.exe                    7516 Console                    1     53,888 K
+chrome.exe                    8132 Console                    1     23,412 K
+chrome.exe                    7008 Console                    1     29,840 K
+chrome.exe                    4144 Console                    1     29,516 K
+chrome.exe                    9040 Console                    1     78,876 K
+chrome.exe                    6636 Console                    1     78,848 K
+chrome.exe                    9184 Console                    1     60,696 K
+chrome.exe                    5908 Console                    1    160,504 K
+chrome.exe                    8920 Console                    1     21,244 K
+chrome.exe                    1044 Console                    1     57,388 K
+chrome.exe                    6916 Console                    1     21,188 K
+notepad.exe                   7432 Console                    1      5,100 K
+mintty.exe                    5792 Console                    1      9,960 K
+conhost.exe                   9140 Console                    1      5,804 K
+bash.exe                      7060 Console                    1      8,716 K
+xampp-control.exe             8604 Console                    1     13,132 K
+taskeng.exe                   7424 Services                   0      5,400 K
+GoogleUpdate.exe              6948 Services                   0      6,408 K
+bash.exe                      3668 Console                    1      5,108 K
+tasklist.exe                  6476 Console                    1      5,888 K
+WmiPrvSE.exe                  4844 Services                   0      6,840 K
+
+24)
+$ cmd
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+25)
+$ attrib
+File not found - C:\xampp\htdocs\praxis-academy\*.*
+
+26)
+$ cscript
+CScript Error: Windows Script Host access is disabled on this machine. Contact your administrator for details.
+
+27)
+$ klist
+
+Current LogonId is 0:0x1b76b
+
+Cached Tickets: (0)
+
+28)
+$ mstsc
+memunculkan jendela remote dekstop connection
+
+29)
+$ ipconfig /?
+
+USAGE:
+    ipconfig [/allcompartments] [/? | /all |
+                                 /renew [adapter] | /release [adapter] |
+                                 /renew6 [adapter] | /release6 [adapter] |
+                                 /flushdns | /displaydns | /registerdns |
+                                 /showclassid adapter |
+                                 /setclassid adapter [classid] |
+                                 /showclassid6 adapter |
+                                 /setclassid6 adapter [classid] ]
+
+where
+    adapter             Connection name
+                       (wildcard characters * and ? allowed, see examples)
+
+    Options:
+       /?               Display this help message
+       /all             Display full configuration information.
+       /release         Release the IPv4 address for the specified adapter.
+       /release6        Release the IPv6 address for the specified adapter.
+       /renew           Renew the IPv4 address for the specified adapter.
+       /renew6          Renew the IPv6 address for the specified adapter.
+       /flushdns        Purges the DNS Resolver cache.
+       /registerdns     Refreshes all DHCP leases and re-registers DNS names
+       /displaydns      Display the contents of the DNS Resolver Cache.
+       /showclassid     Displays all the dhcp class IDs allowed for adapter.
+       /setclassid      Modifies the dhcp class id.
+       /showclassid6    Displays all the IPv6 DHCP class IDs allowed for adapter.
+       /setclassid6     Modifies the IPv6 DHCP class id.
+
+
+The default is to display only the IP address, subnet mask and
+default gateway for each adapter bound to TCP/IP.
+
+For Release and Renew, if no adapter name is specified, then the IP address
+leases for all adapters bound to TCP/IP will be released or renewed.
+
+For Setclassid and Setclassid6, if no ClassId is specified, then the ClassId is removed.
+
+Examples:
+    > ipconfig                       ... Show information
+    > ipconfig /all                  ... Show detailed information
+    > ipconfig /renew                ... renew all adapters
+    > ipconfig /renew EL*            ... renew any connection that has its
+                                         name starting with EL
+    > ipconfig /release *Con*        ... release all matching connections,
+                                         eg. "Local Area Connection 1" or
+                                             "Local Area Connection 2"
+    > ipconfig /allcompartments      ... Show information about all
+                                         compartments
+    > ipconfig /allcompartments /all ... Show detailed information about all
+                                         compartments
+
+30)
+$ finger
+
+Displays information about a user on a specified system running the
+Finger service. Output varies based on the remote system.
+
+FINGER [-l] [user]@host [...]
+
+  -l        Displays information in long list format.
+  user      Specifies the user you want information about. Omit the user
+            parameter to display information about all users on the
+            specifed host.
+  @host     Specifies the server on the remote system whose users you
+            want information about.
+
+
+
+
