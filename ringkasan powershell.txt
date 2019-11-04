@@ -1,0 +1,21 @@
+Aplikasi Powershell:
+
+Hari ini, PowerShell telah menjadi pilihan ideal untuk administrator TI karena memudahkan operasi manajemen dan upaya dalam jaringan perusahaan besar. Misalnya, mari kita asumsikan bahwa kita sedang mengelola jaringan besar yang berisi lebih dari empat ratus server. Sekarang Anda ingin menerapkan solusi keamanan baru. Solusi keamanan ini tergantung pada layanan tertentu yang perlu dijalankan di server tersebut.
+
+Anda pasti dapat masuk ke setiap server dan melihat apakah mereka memiliki layanan menginstal dan menjalankan atau tidak. Namun, tentu saja dibutuhkan banyak kesalahan manusia karena staf Anda perlu menghabiskan banyak waktu untuk proses yang tidak produktif ini.
+
+Namun, jika Anda menggunakan PowerShell, maka Anda bisa menyelesaikan tugas ini hanya dalam beberapa menit. Itu karena seluruh operasi dilakukan dengan satu skrip yang mengumpulkan informasi tentang layanan yang berjalan di server.
+
+Kesimpulan:
+- Windows PowerShell adalah mesin otomatisasi berorientasi objek dan bahasa scripting
+- Powershell menawarkan pengalaman baris perintah yang terintegrasi dengan baik untuk sistem operasi
+- PowerShell versi pertama 1.0 dirilis pada 2006
+- PowerShell memungkinkan skrip dan cmdlet dipanggil pada mesin jarak jauh
+- PowerShell sudah diinstal sebelumnya di semua versi Windows terbaru
+- Cmdlet adalah perintah ringan yang digunakan di lingkungan PowerShell berbasis Window
+- Dapatkan, Mulai, Keluar, Berhenti, Atur, Baru adalah perintah PowerShell yang penting
+- Boolean, Byte, Obrolan, Desimal, Desimal, Panjang adalah Jenis Data penting dari PowerShell
+$ Kesalahan. $ Host, $ Profile, $ PID, $ PSUICulture, $ NULL adalah beberapa variabel khusus yang digunakan di PowerShell
+- Windows PowerShell Integrated Scripting Environment (ISE) adalah editor default untuk PowerShell
+- PowerShell sangat terintegrasi dengan OS Windows sedangkan Command Prompt adalah antarmuka baris perintah default yang disediakan oleh Microsoft
+- PowerShell telah menjadi pilihan ideal bagi administrator TI karena memudahkan operasi manajemen dan upaya dalam jaringan perusahaan besar
