@@ -1,4 +1,4 @@
-import 'package:Hari_2___Minggu_1/Hari_2___Minggu_1.dart' as Hari_2___Minggu_1;
+import 'package:Hari_2/Hari_2.dart' as Hari_2___Minggu_1;
 import 'dart:io';
 
 main(){
