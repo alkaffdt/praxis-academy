@@ -1,12 +1,4 @@
-
-
-void hello() async{
-  print('Bismillah');
+main(){
+  var start = 'Bismillah';
+  print('start');
 }
-
-void main() async{
-  await hello();
-  print('beres bos!');
-}
-
-
