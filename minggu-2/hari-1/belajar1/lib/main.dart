@@ -14,16 +14,22 @@ class Appku extends StatelessWidget{
           title: Text('ini title appBar'),
         ),
         body: Center(
-          child: Text(wordPair.asPascalCase),
+          child: RandomWords(),
         )
       ),
     );
   }
 }
 
-
-class RandomWordsState extends State<Randomords>{
+class RandomWords extends StatefulWidget {
   @override
-  Widget build(BuildContext context)
-    final wordPair = WordPair.
+  RandomWordsState createState() => RandomWordsState();
+}
+
+class RandomWordsState extends State<RandomWords>{
+  @override
+  Widget build(BuildContext context){
+    final wordPair = WordPair.random();
+    return Text(wordPair.asPascalCase);
+  }
 }
