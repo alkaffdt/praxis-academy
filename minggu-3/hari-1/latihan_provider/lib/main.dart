@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
                 Consumer<ApplicationColor>(
                   builder: (context, applicationColor, _) => AnimatedContainer(
                     margin: EdgeInsets.all(5),
-                    width: 100,
+                    width: 250,
                     height: 100,
                     color: applicationColor.color,
                     duration: Duration(milliseconds: 555),
