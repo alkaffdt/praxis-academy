@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "439652453719",
+    "firebase_url": "https://latihan-praxis.firebaseio.com",
+    "project_id": "latihan-praxis",
+    "storage_bucket": "latihan-praxis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439652453719:android:57a42d7c9db69ddb788212",
+        "android_client_info": {
+          "package_name": "com.example.firebase_dasar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "439652453719-0fig4lu7ab1m55pcd2slkb9dj0ots27g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhP-zc2LRpabNLx5XNJbM9TprmbpZwTUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "439652453719-0fig4lu7ab1m55pcd2slkb9dj0ots27g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -21,7 +21,7 @@ class HomePageState extends State<HomePage> {
 
   Future<String> getData() async {
     var response = await http.get(
-      Uri.encodeFull("https://jsonplaceholder.typicode.com/posts"),
+      Uri.encodeFull("https://jsonplaceholder.typicode.com/users"),
       headers: {
         "Accept": "application/json"
       } 
@@ -31,7 +31,7 @@ class HomePageState extends State<HomePage> {
       data = jsonDecode(response.body);
     });
     
-    print(data[1]["title"]);
+    print(data[index]["name"]);
     
     return "Success!";
   }
@@ -39,6 +39,7 @@ class HomePageState extends State<HomePage> {
   @override
   void initState(){
     this.getData();
+    super.initState();
   }
 
   @override
@@ -49,7 +50,7 @@ class HomePageState extends State<HomePage> {
         itemCount: data == null ? 0 : data.length,
         itemBuilder: (BuildContext context, int index){
           return new Card(
-            child: new Text(data[index]["title"]),
+            child: new Text(data[index]["name"]),
           );
         },
       ),

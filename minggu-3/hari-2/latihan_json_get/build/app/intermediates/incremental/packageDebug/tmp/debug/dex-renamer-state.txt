@@ -1,0 +1,4 @@
+#Tue Nov 19 16:05:53 WIB 2019
+base.0=/media/alkaff/DATA/praxis-academy/minggu-3/hari-2/latihan_json/build/app/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+path.0=classes.dex
